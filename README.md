@@ -13,6 +13,8 @@ starter.py [-h] [-p PORT] [strapi develop options]
 optional arguments:
   -h, --help            show this help message and exit
   -p PORT, --port PORT  strapi server port
+  --dbusername          database username
+  --dbpassword          database password
 ```
 
 ## Changelog
