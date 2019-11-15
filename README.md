@@ -1,6 +1,6 @@
 # Strapi Strarter with other args
 
-version: 0.1
+version: 0.1.1
 
 ## Usage
 

@@ -27,6 +27,8 @@ def main():
     cmd = 'strapi {}'.format(strapi_args)
     signal.signal(signal.SIGINT, signal_handler)
     os.system(cmd)
+    if old_port:
+        change_port(old_port)
 
 
 def change_port(new_port):
