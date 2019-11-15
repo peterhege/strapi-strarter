@@ -47,8 +47,9 @@ def change_port(new_port):
     return old_port
 
 
-def signal_handler(sig, frame):
-    change_port(old_port)
+def signal_handler():
+    if old_port:
+        change_port(old_port)
     exit()
 
 
