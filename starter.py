@@ -34,7 +34,7 @@ def main():
             change_port(args.port)
         if args.dbusername:
             change_db('username', args.dbusername)
-        if args.dbpassword:
+        if args.dbpassword != None:
             change_db('password', args.dbpassword)
     cmd = 'strapi {}'.format(strapi_args)
     signal.signal(signal.SIGINT, signal_handler)
