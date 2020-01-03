@@ -1,7 +1,7 @@
 # Strapi Strarter with other args
 
 For https://strapi.io/  
-version: 0.2
+version: 0.2.1
 
 ## Usage
 
@@ -15,6 +15,7 @@ optional arguments:
   -p PORT, --port PORT  strapi server port
   --dbusername USERNAME database username
   --dbpassword PASSWORD database password
+  --dbport PORT database port
 ```
 
 ## Changelog
@@ -23,3 +24,6 @@ optional arguments:
 - Add port argument
 - Add db username argument
 - Add db password argument
+
+### 2020.01.03
+- Add db port
