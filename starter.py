@@ -23,11 +23,13 @@ def main():
     parser.add_argument('--dbusername', type=str, help='Strapi database username', required=False)
     parser.add_argument('--dbpassword', type=str, help='Strapi database password', required=False)
     parser.add_argument('--dbport', type=str, help='Strapi database port', required=False)
+    parser.add_argument('--dbname', type=str, help='Strapi database name', required=False)
     args = parser.parse_args()
     strapi_args = ' '.join(['dev'] + sys.argv[1:])
     strapi_args = re.sub('(--port=[0-9]+|-p [0-9]+) ?', '', strapi_args)
     strapi_args = re.sub('(--dbusername=.* |--dbusername=.*$)', '', strapi_args)
     strapi_args = re.sub('(--dbpassword=.* |--dbpassword=.*$)', '', strapi_args)
+    strapi_args = re.sub('(--dbname=.* |--dbname=.*$)', '', strapi_args)
     strapi_args = re.sub('--dbport=[0-9]+ ?', '', strapi_args)
     if not os.path.isfile(os.path.realpath(SERVER_CONFIG_FILE)):
         print("WARNING: Not found {}".format(SERVER_CONFIG_FILE))
@@ -40,6 +42,8 @@ def main():
             change_db('password', args.dbpassword)
         if args.dbport != None:
             change_db('port', args.dbport)
+        if args.dbname != None:
+            change_db('port', args.dbname)
     cmd = 'strapi {}'.format(strapi_args)
     signal.signal(signal.SIGINT, signal_handler)
     os.system(cmd)
