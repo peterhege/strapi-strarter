@@ -43,7 +43,7 @@ def main():
         if args.dbport != None:
             change_db('port', args.dbport)
         if args.dbname != None:
-            change_db('port', args.dbname)
+            change_db('database', args.dbname)
     cmd = 'strapi {}'.format(strapi_args)
     signal.signal(signal.SIGINT, signal_handler)
     os.system(cmd)

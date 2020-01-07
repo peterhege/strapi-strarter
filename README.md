@@ -1,7 +1,7 @@
 # Strapi Strarter with other args
 
 For https://strapi.io/  
-version: 0.2.2
+version: 0.2.2.1
 
 ## Usage
 
